@@ -61,7 +61,7 @@ export default function AboutPage() {
               <div className="relative overflow-hidden rounded-[2rem] border border-gold-400/25 bg-gradient-to-b from-[#243042] to-[#090d15] shadow-2xl" style={{aspectRatio: '4 / 5'}}>
                 {!photoFailed ? (
                   <img
-                    src="/images/tigerfx-founder-suit.jpg"
+                    src="/images/tigerfx-founder-suit.svg"
                     alt={bm ? 'Potret pengasas TIGERFX Academy' : 'Portrait of TIGERFX Academy founder'}
                     onError={() => setPhotoFailed(true)}
                     className="h-full w-full object-cover object-top"
