@@ -306,7 +306,7 @@ export default function AboutPage() {
             </Reveal>
           </div>
 
-          {/* founder portrait — real committed SVG asset */}
+          {/* founder portrait — real photo asset */}
           <Reveal delay={220}>
             <figure className="relative mx-auto w-full max-w-[380px]">
               <div className="absolute -inset-1.5 rounded-[28px] bg-gradient-gold opacity-60 blur-[2px]" aria-hidden />
@@ -314,11 +314,11 @@ export default function AboutPage() {
                 {photoOk ? (
                   /* eslint-disable-next-line @next/next/no-img-element */
                   <img
-                    src="/images/tigerfx-founder-executive.jpg"
-                    alt={lang === 'ms' ? 'Fariz, pengasas TIGERFX Academy, dalam sut' : 'Fariz, founder of TIGERFX Academy, in a suit'}
-                    width={180}
-                    height={213}
-                    className="mx-auto block w-full max-w-[280px] py-6 object-cover"
+                    src="/images/tigerfx-founder-suit.jpg"
+                    alt={lang === 'ms' ? 'Fariz, pengasas TIGERFX Academy, di pejabat dengan skrin carta dagangan' : 'Fariz, founder of TIGERFX Academy, at his office with trading chart screens'}
+                    width={760}
+                    height={832}
+                    className="block h-auto w-full"
                     onError={() => setPhotoOk(false)}
                   />
                 ) : (
