@@ -47,9 +47,6 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-mist-300">
               <li><Link className="hover:text-gold-300 transition" href="/broker">{t('broker.register')}</Link></li>
               <li><Link className="hover:text-gold-300 transition" href="/dashboard">{t('nav.dashboard')}</Link></li>
-              <li><Link className="hover:text-gold-300 transition" href="/about">About Me / Tentang Saya</Link></li>
-              <li><a className="hover:text-gold-300 transition" href="https://t.me/fariztiger" target="_blank" rel="noopener noreferrer">Telegram @fariztiger</a></li>
-              <li><a className="hover:text-gold-300 transition" href="mailto:tigerhyip@gmail.com">tigerhyip@gmail.com</a></li>
             </ul>
             <p className="mt-4 text-xs leading-relaxed text-mist-400">{t('home.risk.body')}</p>
           </div>

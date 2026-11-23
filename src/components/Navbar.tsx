@@ -14,7 +14,6 @@ const LINKS = [
   { href: '/dashboard', key: 'nav.dashboard' as const },
   { href: '/tools', key: 'nav.tools' as const },
   { href: '/glossary', key: 'nav.glossary' as const },
-  { href: '/about', key: 'nav.about' as const },
 ];
 
 export function Navbar() {
@@ -64,7 +63,7 @@ export function Navbar() {
                   active ? 'text-gold-300' : 'text-mist-200 hover:text-white hover:bg-white/[0.05]'
                 }`}
               >
-                {l.key === 'nav.about' ? (lang === 'ms' ? 'Tentang Saya' : 'About Me') : t(l.key as Exclude<typeof l.key, 'nav.about'>)}
+                {t(l.key)}
                 {active && <span className="absolute inset-x-3 -bottom-[1px] h-[2px] rounded-full bg-gold-400" />}
               </Link>
             );
