@@ -12,6 +12,7 @@ export const UI = {
   'nav.tools': { en: 'Tools', ms: 'Alat' },
   'nav.glossary': { en: 'Glossary', ms: 'Glosari' },
   'nav.broker': { en: 'Open Account', ms: 'Buka Akaun' },
+  'nav.about': { en: 'About Me', ms: 'Tentang Saya' },
   'nav.menu': { en: 'Menu', ms: 'Menu' },
 
   /* common */
