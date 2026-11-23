@@ -49,7 +49,18 @@ export const ChartCanvas = forwardRef<ChartCanvasHandle, Props>(function ChartCa
   const eventsRef = useRef(events);
   eventsRef.current = events;
 
-  useImperativeHandle(ref, () => ({ engine: engineRef.current }), []);
+  /* Live getter: the engine is created in a useEffect AFTER this handle is
+     built, so a plain `engine: engineRef.current` snapshot would stay null
+     forever (Clear all / Undo / Redo / arena trade submit all read it). */
+  useImperativeHandle(
+    ref,
+    () => ({
+      get engine() {
+        return engineRef.current;
+      },
+    }),
+    []
+  );
 
   useEffect(() => {
     const canvas = canvasRef.current;

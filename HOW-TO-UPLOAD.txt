@@ -1,6 +1,14 @@
 TIGERFX ACADEMY — FINISHED PRODUCT (with About Me page)
 =======================================================
 
+UPDATE (v3): fixed "Clear all" (and Undo/Redo) in the simulator, and the
+Arena place-trade submit. If you already uploaded v2, just replace
+src/components/learn/ChartCanvas.tsx (or re-upload everything).
+
+UPDATE (v2): fixed the chart tap mini-games ("Find the FVG" and every
+tap-the-chart drill) — taps now register and give feedback. If you already
+uploaded v1, just replace src/lib/chart/engine.ts (or re-upload everything).
+
 This folder is the complete, ready-to-deploy website. Everything is verified:
 - TypeScript check: clean
 - Production build: clean (12 pages, including /about)

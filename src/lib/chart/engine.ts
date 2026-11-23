@@ -84,6 +84,7 @@ export class ChartEngine {
 
   private hover: { x: number; p: number; px: number; py: number } | null = null;
   private selectedId: string | null = null;
+  private downPos: { px: number; py: number } | null = null;
   private drag:
     | { kind: 'pan'; startX: number; i0: number; i1: number }
     | { kind: 'create'; draft: Drawing; sx: number; sy: number }
@@ -758,6 +759,7 @@ export class ChartEngine {
     this.canvas.focus();
     this.canvas.setPointerCapture(e.pointerId);
     const pt = this.evtPoint(e);
+    this.downPos = { px: pt.px, py: pt.py };
 
     if (e.button === 1 || this.tool === 'pan') {
       this.drag = { kind: 'pan', startX: pt.px, i0: this.view.i0, i1: this.view.i1 };
@@ -883,6 +885,7 @@ export class ChartEngine {
 
   private onUp = (e: PointerEvent) => {
     const drag = this.drag;
+    const pt = this.evtPoint(e);
     if (drag?.kind === 'create') {
       const d = drag.draft as unknown as { x1: number; p1: number; x2: number; p2: number };
       const valid = Math.abs(d.x2 - d.x1) > 0.4 || Math.abs(d.p2 - d.p1) > 0.2;
@@ -900,8 +903,17 @@ export class ChartEngine {
       if (this.undoStack.length > 60) this.undoStack.shift();
       this.redoStack = [];
       this.events.onDrawingsChanged?.(this.drawings);
+    } else if (drag?.kind === 'pan' && this.downPos) {
+      /* Tap detection: pointer went down and up without real movement
+         (pan-drag on empty space with the cursor tool) → this is a click.
+         Chart-task games (find the FVG, swings, arena identify) rely on it. */
+      const moved = Math.hypot(pt.px - this.downPos.px, pt.py - this.downPos.py);
+      if (moved < 7) {
+        this.events.onClick?.({ x: pt.x, p: pt.p });
+      }
     }
     this.drag = null;
+    this.downPos = null;
     this.requestRender();
     try {
       this.canvas.releasePointerCapture(e.pointerId);
