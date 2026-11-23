@@ -314,7 +314,7 @@ export default function AboutPage() {
                 {photoOk ? (
                   /* eslint-disable-next-line @next/next/no-img-element */
                   <img
-                    src="/images/tigerfx-founder-suit.svg"
+                    src="/images/tigerfx-founder-suit.jpg"
                     alt={lang === 'ms' ? 'Fariz, pengasas TIGERFX Academy, dalam sut' : 'Fariz, founder of TIGERFX Academy, in a suit'}
                     width={240}
                     height={319}
