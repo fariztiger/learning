@@ -190,6 +190,20 @@ export function Icon({ name, className = 'w-5 h-5' }: { name: string; className?
           <path d="M12 11v5M12 8h.01" />
         </svg>
       );
+    case 'send':
+      return (
+        <svg {...common}>
+          <path d="M21 3 3 10.5l7.3 2.2L12.5 20 21 3Z" />
+          <path d="m10.3 12.7 5.5-5.5" />
+        </svg>
+      );
+    case 'mail':
+      return (
+        <svg {...common}>
+          <rect x="3" y="5" width="18" height="14" rx="2" />
+          <path d="m4 7 8 6 8-6" />
+        </svg>
+      );
     case 'pen':
       return (
         <svg {...common}>
