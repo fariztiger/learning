@@ -314,11 +314,11 @@ export default function AboutPage() {
                 {photoOk ? (
                   /* eslint-disable-next-line @next/next/no-img-element */
                   <img
-                    src="/images/tigerfx-founder-suit.jpg"
+                    src="/images/tigerfx-founder-executive.jpg"
                     alt={lang === 'ms' ? 'Fariz, pengasas TIGERFX Academy, dalam sut' : 'Fariz, founder of TIGERFX Academy, in a suit'}
-                    width={240}
-                    height={319}
-                    className="mx-auto block w-full max-w-[300px] py-6"
+                    width={180}
+                    height={213}
+                    className="mx-auto block w-full max-w-[280px] py-6 object-cover"
                     onError={() => setPhotoOk(false)}
                   />
                 ) : (
