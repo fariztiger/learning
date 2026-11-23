@@ -9,7 +9,7 @@ export function Footer() {
   return (
     <footer className="mt-20 border-t border-white/[0.07] bg-ink-900/70">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr_1fr]">
           <div>
             <div className="flex items-center gap-2.5">
               <Logo className="w-10 h-10" />
@@ -49,6 +49,23 @@ export function Footer() {
               <li><Link className="hover:text-gold-300 transition" href="/dashboard">{t('nav.dashboard')}</Link></li>
             </ul>
             <p className="mt-4 text-xs leading-relaxed text-mist-400">{t('home.risk.body')}</p>
+          </div>
+          <div>
+            <div className="mb-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-mist-400">
+              {t('nav.contact')}
+            </div>
+            <ul className="space-y-2 text-sm text-mist-300">
+              <li>
+                <Link className="hover:text-gold-300 transition" href="/about">{t('nav.about')}</Link>
+              </li>
+              <li>
+                <a className="hover:text-gold-300 transition" href="mailto:tigerhyip@gmail.com">tigerhyip@gmail.com</a>
+              </li>
+              <li>
+                <a className="hover:text-gold-300 transition" href="https://t.me/fariztiger" target="_blank" rel="noopener noreferrer">Telegram @fariztiger</a>
+              </li>
+            </ul>
+            <p className="mt-4 text-xs leading-relaxed text-mist-400">{t('about.cta')}</p>
           </div>
         </div>
         <div className="divider my-8" />

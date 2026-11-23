@@ -11,8 +11,10 @@ export const UI = {
   'nav.dashboard': { en: 'Dashboard', ms: 'Papan Pemuka' },
   'nav.tools': { en: 'Tools', ms: 'Alat' },
   'nav.glossary': { en: 'Glossary', ms: 'Glosari' },
+  'nav.about': { en: 'About Me', ms: 'Tentang Saya' },
   'nav.broker': { en: 'Open Account', ms: 'Buka Akaun' },
   'nav.menu': { en: 'Menu', ms: 'Menu' },
+  'nav.contact': { en: 'Contact', ms: 'Hubungi' },
 
   /* common */
   'cta.start': { en: 'Start Learning Free', ms: 'Mula Belajar Percuma' },
@@ -285,6 +287,40 @@ export const UI = {
 
   /* achievements */
   'ach.unlocked': { en: 'Achievement unlocked', ms: 'Pencapaian dibuka' },
+
+  /* about / founder services */
+  'about.cta': { en: 'Request a Custom EA / Indicator', ms: 'Minta EA / Indicator Custom' },
+  'about.contactTg': { en: 'Contact on Telegram', ms: 'Hubungi di Telegram' },
+  'about.contactMail': { en: 'Send Email', ms: 'Hantar Email' },
+  'about.formTitle': { en: 'Project inquiry', ms: 'Inkuiri projek' },
+  'about.field.name': { en: 'Client name', ms: 'Nama klien' },
+  'about.field.contact': { en: 'Contact info (email or Telegram)', ms: 'Maklumat hubungan (email atau Telegram)' },
+  'about.field.category': { en: 'Project category', ms: 'Kategori projek' },
+  'about.field.platform': { en: 'Platform', ms: 'Platform' },
+  'about.field.strategy': { en: 'Strategy requirements', ms: 'Keperluan strategi' },
+  'about.field.features': { en: 'Additional features (optional)', ms: 'Ciri tambahan (pilihan)' },
+  'about.field.budget': { en: 'Budget range (optional)', ms: 'Julat bajet (pilihan)' },
+  'about.field.description': { en: 'Project description', ms: 'Penerangan projek' },
+  'about.field.optional': { en: 'optional', ms: 'pilihan' },
+  'about.submit': { en: 'Send enquiry via email', ms: 'Hantar inkuiri melalui email' },
+  'about.mailtoNote': {
+    en: 'This form prepares an email in YOUR email application — it is not submitted to a server. Nothing has been sent until you press send in your email app. No project details are stored by this website.',
+    ms: 'Borang ini menyediakan email dalam aplikasi email ANDA — ia tidak dihantar ke server. Tiada apa-apa dihantar sehingga anda menekan hantar dalam aplikasi email. Tiada butiran projek disimpan oleh laman web ini.',
+  },
+  'about.emailOpened': {
+    en: 'Your email application should now open with the prepared enquiry. Nothing has been sent yet — please press Send inside your email app. If nothing opened, copy the text below and email it to',
+    ms: 'Aplikasi email anda sepatutnya dibuka dengan inkuiri yang disediakan. Belum ada apa-apa dihantar — sila tekan Hantar dalam aplikasi email anda. Jika tiada apa dibuka, salin teks di bawah dan hantar melalui email ke',
+  },
+  'about.copyText': { en: 'Copy enquiry text', ms: 'Salin teks inkuiri' },
+  'about.copied': { en: 'Copied to clipboard', ms: 'Disalin ke papan klip' },
+  'about.orTelegram': { en: 'Or chat on Telegram', ms: 'Atau chat di Telegram' },
+  'about.required': { en: 'Required', ms: 'Wajib' },
+  'about.disclosureTitle': { en: 'Referral disclosure', ms: 'Pendedahan rujukan' },
+  'about.riskShort': {
+    en: 'Trading forex and gold (CFDs) involves significant risk of loss. Education is always free here — a broker account is never required to learn.',
+    ms: 'Dagangan forex dan emas (CFD) melibatkan risiko kerugian yang besar. Pendidikan sentiasa percuma di sini — akaun broker tidak pernah diperlukan untuk belajar.',
+  },
+  'about.ctaBroker': { en: 'Explore Broker Registration', ms: 'Terokai Pendaftaran Broker' },
 
   /* footer */
   'footer.tagline': {

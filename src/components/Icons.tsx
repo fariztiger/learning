@@ -197,6 +197,56 @@ export function Icon({ name, className = 'w-5 h-5' }: { name: string; className?
           <path d="m14.5 7 3 3" />
         </svg>
       );
+    case 'send':
+      return (
+        <svg {...common}>
+          <path d="M22 2 11 13" />
+          <path d="M22 2 15 22l-4-9-9-4 20-7Z" />
+        </svg>
+      );
+    case 'mail':
+      return (
+        <svg {...common}>
+          <rect x="2" y="4" width="20" height="16" rx="2" />
+          <path d="m22 6-10 7L2 6" />
+        </svg>
+      );
+    case 'code':
+      return (
+        <svg {...common}>
+          <path d="m16 18 6-6-6-6M8 6l-6 6 6 6" />
+        </svg>
+      );
+    case 'grid':
+      return (
+        <svg {...common}>
+          <rect x="3" y="3" width="7" height="7" rx="1" />
+          <rect x="14" y="3" width="7" height="7" rx="1" />
+          <rect x="3" y="14" width="7" height="7" rx="1" />
+          <rect x="14" y="14" width="7" height="7" rx="1" />
+        </svg>
+      );
+    case 'swap':
+      return (
+        <svg {...common}>
+          <path d="M16 3h5v5" />
+          <path d="M8 21H3v-5" />
+          <path d="M21 3 3 21" />
+        </svg>
+      );
+    case 'flask':
+      return (
+        <svg {...common}>
+          <path d="M9 3h6M10 3v6.5L4.7 18a2 2 0 0 0 1.7 3h11.2a2 2 0 0 0 1.7-3L14 9.5V3" />
+          <path d="M7.5 14h9" />
+        </svg>
+      );
+    case 'wrench':
+      return (
+        <svg {...common}>
+          <path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L4 17v3h3l5.3-5.3a4 4 0 0 0 5.4-5.4L15 12l-2.3-2.3 2-3.4Z" />
+        </svg>
+      );
     default:
       return (
         <svg {...common}>

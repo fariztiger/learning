@@ -42,6 +42,7 @@ Requirements: Node.js ≥ 18 (tested on Node 20 / npm 10).
 | `/dashboard` | Roadmap, skills profile, achievements, streaks, activity history, progress export/import |
 | `/tools` | Position-size & risk sandbox, R:R builder, live session clock (MYT, DST-aware), economic news guide |
 | `/glossary` | 30+ bilingual flip-card trading terms with search & categories |
+| `/about` | Founder profile & custom trading tools services (EAs, indicators, dashboards, Pine Script, strategy conversion, backtesting) with direct inquiry form |
 | `/broker` | Optional Valetax registration (lazy iframe, referral disclosure, risk info, fallback link) |
 
 ### Curriculum

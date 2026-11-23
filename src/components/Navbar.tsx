@@ -14,6 +14,7 @@ const LINKS = [
   { href: '/dashboard', key: 'nav.dashboard' as const },
   { href: '/tools', key: 'nav.tools' as const },
   { href: '/glossary', key: 'nav.glossary' as const },
+  { href: '/about', key: 'nav.about' as const },
 ];
 
 export function Navbar() {
@@ -52,7 +53,7 @@ export function Navbar() {
           </div>
         </Link>
 
-        <nav className="ml-6 hidden items-center gap-1 lg:flex">
+        <nav className="ml-6 hidden items-center gap-1 xl:flex">
           {LINKS.map((l) => {
             const active = pathname === l.href || pathname.startsWith(l.href + '/');
             return (
@@ -108,7 +109,7 @@ export function Navbar() {
           </Link>
 
           <button
-            className="focus-ring rounded-xl border border-white/[0.12] p-2.5 text-mist-200 lg:hidden"
+            className="focus-ring rounded-xl border border-white/[0.12] p-2.5 text-mist-200 xl:hidden"
             onClick={() => setOpen((v) => !v)}
             aria-label={t('nav.menu')}
             aria-expanded={open}
@@ -120,7 +121,7 @@ export function Navbar() {
 
       {/* mobile menu */}
       {open && (
-        <div className="glass border-t border-white/[0.07] lg:hidden animate-fade-in">
+        <div className="glass border-t border-white/[0.07] xl:hidden animate-fade-in">
           <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4">
             {LINKS.map((l) => {
               const active = pathname === l.href;

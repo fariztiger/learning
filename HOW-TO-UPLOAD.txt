@@ -1,0 +1,73 @@
+TIGERFX ACADEMY — FINISHED PRODUCT (with About Me page)
+=======================================================
+
+This folder is the complete, ready-to-deploy website. Everything is verified:
+- TypeScript check: clean
+- Production build: clean (12 pages, including /about)
+- All routes tested working: / /learn /simulator /arena /dashboard /tools
+  /glossary /broker /about  + the founder portrait image
+
+WHAT'S INSIDE
+- Full bilingual (BM/EN) TIGERFX Academy site
+- NEW: /about — founder page (Fariz) with portrait, 6 custom-tool services,
+  inquiry form (opens the visitor's email app — honest, no fake submission),
+  email + Telegram contact, optional Valetax broker CTA with risk disclosure
+
+
+HOW TO PUT IT ONLINE (2 options — pick one)
+===========================================
+
+OPTION A — Upload on the GitHub website (easiest)
+
+1. Go to your repository https://github.com/fariztiger/learning
+2. FIRST, delete the old broken files, or the Vercel build WILL FAIL:
+     - the folder  source-about/    (click it → delete each file, or use the
+       "Delete file" button on its files)
+     - the file   tsconfig.tsbuildinfo   (if present)
+3. Click "Add file" → "Upload files"
+4. Drag ALL files and folders from this package into the upload box
+   (src, public, package.json, package-lock.json, next.config.mjs,
+    tsconfig.json, tailwind.config.ts, postcss.config.mjs, vercel.json,
+    README.md, .gitignore, ... — everything)
+5. Commit directly to  main
+6. Vercel will automatically rebuild. Done.
+
+TIP: If deleting old files on GitHub is annoying, the simpler alternative is
+to DELETE the repository and create it again with the same name, then upload
+this package as the first commit. Vercel keeps working with the same project.
+
+OPTION B — Using git commands
+
+  git clone https://github.com/fariztiger/learning.git
+  cd learning
+  # copy every file from this package into the folder (replace everything)
+  rm -rf source-about tsconfig.tsbuildinfo
+  git add -A
+  git commit -m "TIGERFX Academy complete site with About Me page"
+  git push origin main
+
+
+DEPLOY ON VERCEL
+================
+If the project https://vercel.com/fariztigers-projects/learning already
+exists and watches the repo → pushing to main is enough. It deploys itself.
+
+If you create a NEW repository: go to vercel.com → "Add New" → Project →
+import the repository → Framework: Next.js (auto-detected) → Deploy.
+No environment variables needed.
+
+AFTER DEPLOYMENT — quick check
+==============================
+Open  https://learning-psi-coral.vercel.app/about
+  ✓ founder photo + "Founder of TIGERFX Academy | Trading Tools Developer"
+  ✓ 6 service cards (Custom EA, Custom Indicators, Dashboards, Pine Script,
+    Strategy Conversion, Backtesting/Debugging/Optimization)
+  ✓ "Request a Custom EA / Indicator" button scrolls to the inquiry form
+  ✓ BM/EN toggle top-right switches everything instantly
+  ✓ email + Telegram buttons work
+NOTE: If your Vercel project shows a different URL, use the one in your
+Vercel dashboard.
+
+Questions the page answers honestly: the inquiry form OPENS YOUR EMAIL APP
+with the prepared message — it does not send anything by itself, and the
+site never stores the project details.
